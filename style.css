@@ -6,6 +6,7 @@
   --bg-black-50: #e8dfec;
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
+  --skin-color: #ff6347; /* Example skin color, adjust as needed */
 }
 
 canvas {
@@ -175,6 +176,7 @@ ul {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
+
 /* Global CSS End */
 
 /* Aside Start */
@@ -295,6 +297,7 @@ ul {
   animation: slideRight 0.5s ease forwards;
   animation-delay: calc(0.2s * var(--i));
 }
+
 .aside .nav li a::after {
   content: "";
   width: 0;
@@ -326,66 +329,97 @@ ul {
   margin-right: 15px;
 }
 
-/* Aside End */
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .aside {
+    left: -270px;
+  }
 
-/* Home Start */
-.home {
-  min-height: 100vh;
-  display: flex;
-  color: var(--text-black-900);
+  .aside.open {
+    left: 0;
+  }
+
+  .aside .nav-toggler {
+    display: flex;
+  }
 }
 
-.home .home-info {
-  flex: 0 0 60%;
-  max-width: 60%;
+@media (max-width: 992px) {
+  .aside {
+    width: 200px;
+  }
+
+  .aside .logo {
+    font-size: 25px;
+  }
+
+  .aside .logo a {
+    font-size: 25px;
+  }
+
+  .aside .logo a span {
+    font-size: 35px;
+  }
+
+  .aside .nav li a {
+    font-size: 14px;
+  }
+
+  .aside .nav-toggler {
+    left: 220px;
+  }
 }
 
-h3.hello {
-  font-size: 28px;
-  margin: 15px 0;
+@media (max-width: 768px) {
+  .aside {
+    width: 180px;
+  }
+
+  .aside .logo {
+    font-size: 20px;
+  }
+
+  .aside .logo a {
+    font-size: 20px;
+  }
+
+  .aside .logo a span {
+    font-size: 30px;
+  }
+
+  .aside .nav li a {
+    font-size: 12px;
+  }
+
+  .aside .nav-toggler {
+    left: 200px;
+  }
 }
 
-h3.hello span {
-  font-family: "Clicker Script", cursive;
-  font-size: 30px;
-  font-weight: 700;
-  color: var(--skin-color);
-}
+@media (max-width: 576px) {
+  .aside {
+    width: 150px;
+  }
 
-h3.my-profession {
-  font-size: 30px;
-  margin: 15px 0;
-}
+  .aside .logo {
+    font-size: 18px;
+  }
 
-.typing {
-  color: var(--skin-color);
-}
+  .aside .logo a {
+    font-size: 18px;
+  }
 
-.home-info p {
-  font-size: 20px;
-  margin-bottom: 70px;
-  color: var(--text-black-700);
-}
+  .aside .logo a span {
+    font-size: 25px;
+  }
 
-.home .home-img {
-  flex: 0 0 40%;
-  max-width: 40%;
-  text-align: center;
-  position: relative;
-  border-radius: 50%;
-  opacity: 0;
-  box-shadow: 0 0 10px red, 0 0 25px red, 0 0 50px red, 0 0 100px red,
-    0 0 200px red;
-  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-  animation-delay: 1.1s, 2.1s;
-}
+  .aside .nav li a {
+    font-size: 10px;
+  }
 
-.home .home-img img {
-  width: 410px;
-  height: 410px;
-  opacity: 0;
-  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-  animation-delay: 1.1s, 2.1s;
+  .aside .nav-toggler {
+    left: 170px;
+  }
 }
 
 /* Home End */
@@ -583,7 +617,79 @@ h3.my-profession {
   color: var(--text-black-700);
 }
 
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .skills {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about .about-content .personal-info .info-item,
+  .about .about-content .skills .skills-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .personal-info,
+  .about .about-content .skills {
+    margin-top: 20px;
+  }
+
+  .about .about-content .education,
+  .about .about-content .experience {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .about-content .about-text h3 {
+    font-size: 20px;
+  }
+
+  .about .about-content .about-text p,
+  .about .about-content .personal-info .info-item p,
+  .about .about-content .skills .skills-item h5,
+  .about .about-content .timeline .timeline-title,
+  .about .about-content .timeline .timeline-text {
+    font-size: 14px;
+  }
+
+  .about .about-content .skills .skills-item .skill-percent {
+    top: -30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about .about-content .about-text h3 {
+    font-size: 18px;
+  }
+
+  .about .about-content .about-text p,
+  .about .about-content .personal-info .info-item p,
+  .about .about-content .skills .skills-item h5,
+  .about .about-content .timeline .timeline-title,
+  .about .about-content .timeline .timeline-text {
+    font-size: 12px;
+  }
+
+  .about .about-content .skills .skills-item .skill-percent {
+    top: -25px;
+    font-size: 12px;
+  }
+}
 /* About End */
+
 
 /* Education Start */
 .education .container {
@@ -732,7 +838,58 @@ h3.my-profession {
   color: var(--text-black-700);
 }
 
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .education .education-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .education .education-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .education .education-item .education-item-inner h4 {
+    font-size: 16px;
+  }
+
+  .education .education-item .education-item-inner p {
+    font-size: 14px;
+  }
+
+  .education .container .timeline .timeline-title {
+    font-size: 16px;
+  }
+
+  .education .container .timeline .timeline-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .education .education-item .education-item-inner h4 {
+    font-size: 14px;
+  }
+
+  .education .education-item .education-item-inner p {
+    font-size: 12px;
+  }
+
+  .education .container .timeline .timeline-title {
+    font-size: 14px;
+  }
+
+  .education .container .timeline .timeline-text {
+    font-size: 12px;
+  }
+}
 /* Education End */
+
 
 /* Contact Start */
 .contact-title {
@@ -797,11 +954,6 @@ h3.my-profession {
 
 .contact .contact-form .form-item {
   margin-bottom: 30px;
-}
-
-.contact .contact-form .form-item .form-control {
-  width: 100%;
-  height: 50px;
 }
 
 .contact .contact-form .form-item .form-control {
