@@ -367,26 +367,61 @@ h3.my-profession {
   color: var(--text-black-700);
 }
 
+
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: black;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  opacity: 0;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 0.4s;
+  
+}
+
+.home-sci a:hover {
+  background: rgb(255, 0, 0);
+  color: black;
+  box-shadow: 0 0 20px rgb(255, 0, 0);
+}
+
+.home {
+  display: flex;
+  justify-content: flex-end; /* Aligns the items to the right side */
+  align-items: right; /* Centers the items vertically */
+  height: 100vh; /* Ensure the home section takes the full height of the viewport */
+}
+
 .home .home-img {
-  flex: 0 0 40%;
-  max-width: 40%;
-  text-align: center;
   position: relative;
   border-radius: 50%;
-  opacity: 0;
-  box-shadow: 0 0 10px red, 0 0 25px red, 0 0 50px red, 0 0 100px red,
-    0 0 200px red;
+  box-shadow: 0 0 10px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px red;
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 1.1s, 2.1s;
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  width: 410px; /* Ensure the circle has the same size as the image */
+  height: 410px; /* Ensure the circle has the same size as the image */
+  margin-left: 0%; /* Adjust this value to move it further to the right */
+}
+
+.home .home-img img {
+  border-radius: 50%; /* Ensure the image is circular */
+  width: 100%; /* Make the image take the full width of the parent container */
+  height: 100%; /* Make the image take the full height of the parent container */
   animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
   animation-delay: 1.1s, 2.1s;
 }
 
-.home .home-img img {
-  width: 410px;
-  height: 410px;
-  opacity: 0;
-  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-  animation-delay: 1.1s, 2.1s;
-}
 
 /* Home End */
 
