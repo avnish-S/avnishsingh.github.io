@@ -430,7 +430,7 @@ publicKey: "Fxuco1j3JtkOhtSsC",
         console.log(pair[0] + ': ' + pair[1]);
       }
 
-      emailjs.sendForm('service_5pva2mg','template_qkhgeb7')
+      emailjs.sendForm('service_5pva2mg','template_qkhgeb7', this)
         .then(function() {
           document.getElementById('form-status').innerHTML = 'Message sent successfully!';
           document.getElementById('form-status').style.color = 'green';
